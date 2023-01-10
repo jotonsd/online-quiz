@@ -3,10 +3,10 @@
     <title>Quiz</title>
 @endsection
 @section('main')
-    <h1>It's a Quiz Page</h1>
     <h2>Quiz Title: {{$quiz->title}}</h2>
     <h3>Exam Time: {{$quiz->duration}} Minutes or {{$quiz->duration*60}} Seconds</h3>
     <h4>Timer: <div id="timer_style"><label id="minutes">00</label>:<label id="seconds">00</label></div></h4>
+    <br>
     <div class="text-center">
         <form method="post" action="{{route('store.answer')}}">
             @csrf
@@ -15,9 +15,10 @@
             @php
             $i=1;
             @endphp
-            @foreach($questions as $question)
+            @foreach($questions as $key => $question)
+                <h5 align="left">{{ ++$key }}. {{$question->question}}</h5>
                 <select name="answer[{{$i++}}]" class="form-control" required>
-                <option selected disabled value>Question: {{$question->question}}</option>
+                <option selected >Select Option</option>
                     <option value="option_a">{{$question->option_a}}</option>
                     <option value="option_b">{{$question->option_b}}</option>
                     <option value="option_c">{{$question->option_c}}</option>

@@ -19,12 +19,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',[AuthController::class,'index'])->name('login.view');
+Route::get('/',[AuthController::class,'web'])->name('web.view');
+Route::get('/login',[AuthController::class,'index'])->name('login.view');
 Route::get('/reg',[AuthController::class,'regView'])->name('reg.view');
 
 
 Route::post('/reg-store',[AuthController::class,'regAction'])->name('reg.action');
 Route::post('/login-action',[AuthController::class,'loginAction'])->name('login.action');
+Route::post('/contact-us',[AuthController::class,'contact'])->name('contact');
 
 
 
@@ -42,16 +44,26 @@ Route::group(['middleware'=>['verifyUserLogin']],function (){
     Route::group(['middleware'=>['verifyAdmin']],function(){
 
         Route::get('/add-quiz',[QuizController::class,'addQuiz'])->name('add.quiz');
+        Route::get('/edit-quiz/{id}',[QuizController::class,'editQuiz'])->name('edit.quiz');
+        Route::post('/edit-quiz/{id}',[QuizController::class,'updateQuiz'])->name('update.quiz');
+        // Route::get('/delete-quiz/{id}',[QuizController::class,'deleteQuiz'])->name('delete.quiz');
 
 
 
         Route::get('/add-question/{id}',[QuestionController::class,'addQuestion'])->name('add.question');
+        Route::get('/edit-question/{id}',[QuestionController::class,'editQuestion'])->name('edit.question');
+        Route::post('/edit-question/{id}',[QuestionController::class,'updateQuestion'])->name('update.question');
+        Route::get('/delete-question/{id}',[QuestionController::class,'deleteQuestion'])->name('delete.question');
 
         Route::post('/store-quiz',[QuizController::class,'storeQuiz'])->name('store.quiz');
 
         Route::post('/store-question',[QuestionController::class,'storeQuestion'])->name('store.question');
 
-    Route::get('/admin-dashboard',[AuthController::class,'adminDashboardView'])->name('admin.dashboard');
+        Route::get('/admin-dashboard',[AuthController::class,'adminDashboardView'])->name('admin.dashboard');
+
+
+        Route::get('/inbox',[AuthController::class,'inbox'])->name('inbox');
+        Route::get('/inbox/{id}',[AuthController::class,'inbox_details'])->name('inbox_details');
 
     });
 

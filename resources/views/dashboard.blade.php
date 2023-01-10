@@ -12,7 +12,7 @@
 			    <h4 class="card-title">Total User</h4>
 			    <h2 class="card-text">{{ count(App\Models\User::all()) }}</h2>
 			  </div>
-			</div>    		
+			</div>
     	</div>
 
     	<div class="col-md-3">
@@ -21,7 +21,7 @@
 			    <h4 class="card-title">Total Quizes</h4>
 			    <h2 class="card-text">{{ count(App\Models\Quiz::all()) }}</h2>
 			  </div>
-			</div>    		
+			</div>
     	</div>
 
     	<div class="col-md-3">
@@ -30,7 +30,7 @@
 			    <h4 class="card-title">Total Questions</h4>
 			    <h2 class="card-text">{{ count(App\Models\Question::all()) }}</h2>
 			  </div>
-			</div>    		
+			</div>
     	</div>
 
     	<div class="col-md-3">
@@ -39,7 +39,7 @@
 			    <h4 class="card-title">Total Candidate</h4>
 			    <h2 class="card-text">{{ count(App\Models\ExamCandidate::get()->unique('user_id')) }}</h2>
 			  </div>
-			</div>    		
+			</div>
     	</div>
         @endif
     </div>

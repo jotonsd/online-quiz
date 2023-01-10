@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 @section('title')
-    <title>Dashboard</title>
+    <title>Quiz list</title>
 @endsection
 @section('main')
     <h3>Quiz List</h3>

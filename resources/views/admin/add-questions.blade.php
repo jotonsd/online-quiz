@@ -50,6 +50,7 @@
                 <th scope="col">C</th>
                 <th scope="col">D</th>
                 <th scope="col">Correct</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -65,6 +66,10 @@
                     <td>{{$question->option_c}}</td>
                     <td>{{$question->option_d}}</td>
                     <td>{{$question->correct_option}}</td>
+                    <td>
+                        <a href="{{ route('edit.question', $question->id) }}" class="btn btn-sm btn-info">Edit</a>
+                        <a href="{{ route('delete.question', $question->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

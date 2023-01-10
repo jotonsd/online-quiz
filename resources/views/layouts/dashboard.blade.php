@@ -13,10 +13,12 @@
     @yield('title')
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
         <div class="container">
-            <div>                
-              <a class="navbar-brand" href="{{route('dashboard.view')}}">Online Quiz</a>
+            <div>
+              <a class="navbar-brand" href="{{route('dashboard.view')}}">
+                <img src="{{ asset('img/Quizze.png') }}" alt="" width="50">
+              </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -32,12 +34,17 @@
                             <a class="nav-link {{ Route::current()->uri == 'add-quiz' ? 'active' : '' }}" href="{{route('add.quiz')}}">Add Quiz</a>
                         </li>
                     @endif
-                        <li class="nav-item">
-                            <a class="nav-link {{ Route::current()->uri == 'quiz-list' ? 'active' : '' }}" href="{{route('list.quiz')}}">Quiz List </a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Str::startsWith(Route::current()->uri, 'quiz') ? 'active' : '' }}" href="{{route('list.quiz')}}">Quiz List </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Route::current()->uri == 'results' ? 'active' : '' }}" href="{{route('results')}}">Results </a>
                     </li>
+                    @if(session('user_role')=='admin')
+                        <li class="nav-item">
+                            <a class="nav-link {{Str::startsWith(Route::current()->uri, 'inbox') ? 'active' : '' }}" href="{{route('inbox')}}">Inbox</a>
+                        </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('logout')}}">Logout</a>
                     </li>
@@ -62,7 +69,7 @@
               <strong>{{session('error')}}</strong>
             </div>
         @endif
-        
+
         @yield('main')
     </div>
 <!-- Optional JavaScript; choose one of the two! -->

@@ -13,6 +13,7 @@
                 <th scope="col">From</th>
                 <th scope="col">To</th>
                 <th scope="col">Duration</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -23,6 +24,10 @@
                     <td>{{$quiz->from_time}}</td>
                     <td>{{$quiz->to_time}}</td>
                     <td>{{$quiz->duration}} minutes</td>
+                    <td>
+                        <a href="{{ route('edit.quiz', $quiz->id) }}" class="btn btn-sm btn-info">Edit</a>
+                        {{-- <a href="{{ route('delete.quiz', $quiz->id) }}" class="btn btn-sm btn-danger">Delete</a> --}}
+                    </td>
                 </tr>
             @endforeach
             </tbody>
