@@ -1,3 +1,4 @@
+
 ## About Online MCQ Quiz System in PHP Laravel
 
 This Online MCQ Quiz System is a web application based on Laravel (PHP) that can help to understand how to create an online quiz system using laravel or PHP. Currently, The initial version has the following features:
@@ -17,15 +18,15 @@ I created this project to help someone in his university project for Web Program
 ## Installation
 Installing this project is very easy. To do it, you can follow these steps.
 
-- Make Sure You Have Installed Composer on Your System
-- Then, Download this project and open it with any editor.
-- Now, type composer update in the terminal and hit enter. If your editor doesn't have built in terminal, you can use default terminal of your OS.
-- Rename the .env.example to .env and put your database details here.
-- Then run this command "php artisan migrate" and then, this one "php artisan db:seed"
-- Now, You can run your project from local host. However, You also can use this command "php artisan serv" to test this project.
-- The default username is "admin" and password is "123456". Use this credential to login and create quiz.
+- Clone the Github project
+- Then go to the project folder and run commands 
+- `composer-install`
+- `cp .env.example .env`
+- Then setup your database connection in `.env` file
+- Then run this command `php artisan migrate` and then run `php artisan db:seed`
+- Now, You can run your project from local host. However, You also can use this command `php artisan serve` to run the server.
+- Hit the url `http://localhost:8000/`
+- The default username is `admin` and password is `123456`. Use this credential to login and create quiz.
 - Student Accounts are not created automatically. So, You can signup for one to test.
-
-You can modify/customize this project. I hope this project will help to understand how to build a custom link shortening application with Laravel.
 
 
