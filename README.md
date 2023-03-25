@@ -14,8 +14,8 @@ This Online MCQ Quiz System is a web application based on Laravel (PHP) that can
 
 I created this project to help someone in his university project for Web Programming Course a few months ago. I hope it will help other students as well. That's why I have uploaded it.
 
-## How to Run this Project
-Running this project is very easy. To do it, you can follow these steps.
+## Installation
+Installing this project is very easy. To do it, you can follow these steps.
 
 - Make Sure You Have Installed Composer on Your System
 - Then, Download this project and open it with any editor.
@@ -28,12 +28,4 @@ Running this project is very easy. To do it, you can follow these steps.
 
 You can modify/customize this project. I hope this project will help to understand how to build a custom link shortening application with Laravel.
 
-## A Few Screenshots
-
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/SxwFdkB8/Screenshot-2021-10-07-at-6-02-24-PM.png" alt="Screenshot-2021-10-07-at-6-02-24-PM"/></a><br/><br/>
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/wvzKKFTj/Screenshot-2021-10-07-at-6-02-57-PM.png" alt="Screenshot-2021-10-07-at-6-02-57-PM"/></a><br/><br/>
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/NfCwy1bd/Screenshot-2021-10-07-at-6-03-06-PM.png" alt="Screenshot-2021-10-07-at-6-03-06-PM"/></a><br/><br/>
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/rpx6Y7TH/Screenshot-2021-10-07-at-6-04-03-PM.png" alt="Screenshot-2021-10-07-at-6-04-03-PM"/></a><br/><br/>
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/Qxd3x6gB/Screenshot-2021-10-07-at-6-04-24-PM.png" alt="Screenshot-2021-10-07-at-6-04-24-PM"/></a><br/><br/>
-<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/vTQdnhpN/Screenshot-2021-10-07-at-6-04-38-PM.png" alt="Screenshot-2021-10-07-at-6-04-38-PM"/></a><br/><br/>
 
